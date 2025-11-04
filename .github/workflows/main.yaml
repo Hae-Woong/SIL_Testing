@@ -17,6 +17,11 @@ jobs:
     name: Build SUT
     runs-on: vtt
     steps:
+
+      # 1️⃣ Git SSL Athenticaion  off (self-signed Certi workaround)
+      - name: Disable Git SSL verification
+        run: git config --global http.sslVerify false
+
       # check out the repository containing the codebase
       - name: Checkout repository
         uses: actions/checkout@v4
