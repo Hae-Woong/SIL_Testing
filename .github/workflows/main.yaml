@@ -42,7 +42,13 @@ jobs:
         with:
           path: |
             ./ECU/Appl/GenDataVTT
-          key: ${{ hashFiles('./ECU/LightControl.dpa','./ECU/Config') }}
+         
+         key: ${{ hashFiles('./ECU/LightControl.dpa','./ECU/Config') }}
+
+      # VttMake Path
+      - name: Add VttMake to PATH
+        run: |
+            $env:Path += ";C:\Program Files\Vector vVIRTUALtarget 9\Exec64"
 
       # run DaVinci & vVIRTUALtarget if no cache build is available
       - name: Run DaVinci & vVIRTUALtarget
