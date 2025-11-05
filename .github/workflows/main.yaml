@@ -41,14 +41,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            ./ECU/Appl/GenDataVTT
-         
-         key: ${{ hashFiles('./ECU/LightControl.dpa','./ECU/Config') }}
+            ./ECU/Appl/GenDataVTT       
+          key: ${{ hashFiles('./ECU/LightControl.dpa','./ECU/Config') }}
 
       # VttMake Path
       - name: Add VttMake to PATH
+        shell: pwsh
         run: |
-            $env:Path += ";C:\Program Files\Vector vVIRTUALtarget 9\Exec64"
+            echo "C:\Program Files\Vector vVIRTUALtarget 9\Exec64" | Out-File -FilePath $env:GITHUB_PATH -Append
 
       # run DaVinci & vVIRTUALtarget if no cache build is available
       - name: Run DaVinci & vVIRTUALtarget
