@@ -11,7 +11,7 @@
         <!-- Generates the code of all configured Basic Software (BSW) modules in Vector DaVinci Configurator. -->
         <GenerateBsw />
         <GenerateVcxProject>
-            <VsTargetVersion>VS2019</VsTargetVersion>
+            <VsTargetVersion>VS2022</VsTargetVersion>
             <SourceFiles>
                 <!-- Define source files with glob patterns -->
                 <File>Appl\Source\Main.c</File>
@@ -28,7 +28,7 @@
 
         <BuildVsSolution>
             <!-- change path to the install path of build tools in the vtt container-->
-            <VsToolchainPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools</VsToolchainPath>
+            <VsToolchainPath>C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild</VsToolchainPath>
             <VsConfiguration>Debug</VsConfiguration>
         </BuildVsSolution>
         <GenerateZip />

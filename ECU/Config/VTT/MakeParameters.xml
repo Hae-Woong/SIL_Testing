@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MakeParameters xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <VersionInfo MajorVer="0" MinorVer="0" BuildVer="29" PrivateVer="0">
+    <ProcessName>Vector.VTT.Shared.dll</ProcessName>
+  </VersionInfo>
+  <Timestamp>2025-11-05T10:38:09.782974+09:00</Timestamp>
+  <GlobalMakeStepList />
+  <EcuInfoList />
+</MakeParameters>
