@@ -16,9 +16,12 @@ jobs:
   build-sut:
     name: Build SUT
     runs-on: vtt
+    env:
+      # actions/cache, actions/upload-artifact ..SSL validation off
+      NODE_TLS_REJECT_UNAUTHORIZED: 0 
     steps:
 
-      # 1️⃣ Git SSL Athenticaion  off (self-signed Certi workaround)
+      # Git SSL validation off (self-signed Certi workaround)
       - name: Disable Git SSL verification
         run: git config --global http.sslVerify false
 
